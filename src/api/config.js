@@ -20,3 +20,12 @@ export function admin () {
     method: 'get',
   })
 }
+
+// 新增：更新 admin 配置
+export function updateAdmin (data) {
+  return request({
+    url: '/config/admin',
+    method: 'put',
+    data,
+  })
+}
