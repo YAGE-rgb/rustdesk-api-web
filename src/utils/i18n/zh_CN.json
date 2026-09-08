@@ -512,9 +512,7 @@
   "Refresh": {
     "One": "刷新"
   },
-  "Save": {
-    "One": "保存"
-  },
+  "Save": "保存",
   "SendCustom": {
     "One": "发送自定义"
   },
@@ -548,5 +546,9 @@
   "Remark": {
     "One": "备注"
   },
-  "SiteSettings": "站点设置"
+  "SiteSettings": "站点设置",
+  "SiteTitle": "页面标题",
+  "WelcomeMessage": "欢迎语",
+  "WelcomeTip": "留空则不显示欢迎语",
+  "Reset": "重置"
 }
