@@ -499,9 +499,7 @@
   "Refresh": {
     "One": "Refresh"
   },
-  "Save": {
-    "One": "Save"
-  },
+  "Save": "Save",
   "SendCustom": {
     "One": "Send Custom"
   },
@@ -532,5 +530,9 @@
   "Remark": {
     "One": "Remark"
   },
-  "SiteSettings": "Site Settings"
+  "SiteSettings": "Site Settings",
+  "SiteTitle": "Site Title",
+  "WelcomeMessage": "Welcome Message",
+  "WelcomeTip": "Leave empty to hide welcome message",
+  "Reset": "Reset"
 }
