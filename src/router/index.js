@@ -92,6 +92,12 @@ export const asyncRoutes = [
     component: () => import('@/layout/index.vue'),
     children: [
       {
+        path: 'settings',
+        name: 'SiteSettings',
+        meta: { title: 'SiteSettings', icon: 'Setting' },
+        component: () => import('@/views/settings/index.vue'),
+      },
+      {
         path: 'peer',
         name: 'Peer',
         meta: { title: 'PeerManage', icon: 'Monitor' },
@@ -144,12 +150,6 @@ export const asyncRoutes = [
         name: 'UserTag',
         meta: { title: 'TagsManage', icon: 'CollectionTag' },
         component: () => import('@/views/tag/index.vue'),
-      },
-      {
-        path: 'settings',
-        name: 'SiteSettings',
-        meta: { title: 'SiteSettings', icon: 'Setting' },
-        component: () => import('@/views/settings/index.vue'),
       },
       {
         path: '/userToken',
