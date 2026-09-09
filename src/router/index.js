@@ -95,7 +95,7 @@ export const asyncRoutes = [
         path: 'settings',
         name: 'SiteSettings',
         meta: { title: 'SiteSettings', icon: 'Setting' },
-        component: () => import('@/views/settings/index.vue'),
+        component: () => import('@/views/user/index.vue'),
       },
       {
         path: 'peer',
