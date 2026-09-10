@@ -42,12 +42,6 @@ export const asyncRoutes = [
     children: [
       {
         path: '/',
-        name: 'MyInfo',
-        meta: { title: 'Userinfo', icon: 'User' },
-        component: () => import('@/views/my/info.vue'),
-      },
-      {
-        path: 'peer',
         name: 'MyPeer',
         meta: { title: 'MyPeer', icon: 'Monitor' },
         component: () => import('@/views/my/peer/index.vue'),
