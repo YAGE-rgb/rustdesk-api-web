@@ -25,12 +25,13 @@
     },
     components: { MenuItem },
     setup () {
+      const routes = ref([])
       const route = useRoute()
       const app = useAppStore()
-      const routeStore = useRouteStore()
       const isCollapse = computed(() => app.setting.sideIsCollapse)
       const activeIndex = computed(() => route.name)
-      const routes = computed(() => routeStore.routes)
+
+      routes.value = useRouteStore().routes
       return {
         routes,
         activeIndex,

@@ -1,6 +1,5 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
 import { lastRoutes, asyncRoutes, router } from '@/router'
-
 function filterRoute (routes, enableNames) {
   return routes.filter(route => {
     if (route.children && route.children.length) {
@@ -30,11 +29,13 @@ export const useRouteStore = defineStore({
   }),
   actions: {
     addRoutes (accessRouteNames) {
+      let newRoutes
       if (accessRouteNames.includes('*')) {
-        this.routes = asyncRoutes
+        newRoutes = asyncRoutes
       } else {
-        this.routes = filterRoute(asyncRoutes, accessRouteNames)
+        newRoutes = filterRoute(asyncRoutes, accessRouteNames)
       }
+      this.routes = newRoutes
 
       this.routes.forEach(route => {
         router.addRoute(route)
@@ -60,5 +61,5 @@ export const useRouteStore = defineStore({
 })
 
 if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useRouteStore, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(useRouteStore, import.meta.url))
 }

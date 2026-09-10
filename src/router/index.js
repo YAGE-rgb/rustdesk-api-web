@@ -92,12 +92,6 @@ export const asyncRoutes = [
     component: () => import('@/layout/index.vue'),
     children: [
       {
-        path: 'settings',
-        name: 'SiteSettings',
-        meta: { title: 'SiteSettings', icon: 'Setting' },
-        component: () => import('@/views/user/index.vue'),
-      },
-      {
         path: 'peer',
         name: 'Peer',
         meta: { title: 'PeerManage', icon: 'Monitor' },
@@ -120,6 +114,12 @@ export const asyncRoutes = [
         name: 'UserList',
         meta: { title: 'UserManage', icon: 'User' },
         component: () => import('@/views/user/index.vue'),
+      },
+      {
+        path: 'configpage',
+        name: 'ConfigPage',
+        meta: { title: '站点设置', icon: 'Setting' },
+        component: () => import('@/views/siteconfig/index.vue'),
       },
       {
         path: 'add',
